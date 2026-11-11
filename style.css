@@ -1,9 +1,9 @@
-/* --- Global Theme Setup (Galaxy / Sea Deep Blue & Cyan) --- */
+/* --- Global Theme Setup (Cosmic Galaxy & Cyan Glow) --- */
 :root {
-  --bg-deep-space: #060913;
-  --bg-card-glass: rgba(15, 23, 42, 0.7);
+  --bg-deep-space: #030712;
+  --bg-card-glass: rgba(15, 23, 42, 0.75);
   --border-glass: rgba(56, 189, 248, 0.25);
-  --primary-blue: #1d4ed8;
+  --primary-blue: #2563eb;
   --cyan-glow: #38bdf8;
   --text-main: #f8fafc;
   --text-muted: #94a3b8;
@@ -27,18 +27,18 @@ body {
   overflow-x: hidden;
 }
 
-/* --- Reusable Glassmorphism Styles --- */
+/* --- Glassmorphism Cards --- */
 .glass-card {
   background: var(--bg-card-glass);
   backdrop-filter: blur(14px);
   -webkit-backdrop-filter: blur(14px);
   border: 1px solid var(--border-glass);
   border-radius: 16px;
-  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.4);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.5);
 }
 
 .bg-darker {
-  background-color: #03050a;
+  background-color: #02040a;
 }
 
 .text-cyan {
@@ -75,7 +75,7 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 18px 10%;
-  background: rgba(6, 9, 19, 0.85);
+  background: rgba(3, 7, 18, 0.9);
   backdrop-filter: blur(12px);
   position: sticky;
   top: 0;
@@ -84,7 +84,7 @@ body {
 }
 
 .logo {
-  font-size: 1.4rem;
+  font-size: 1.3rem;
   font-weight: 700;
   color: #fff;
 }
@@ -105,13 +105,13 @@ body {
 }
 
 .nav-links li {
-  margin-left: 25px;
+  margin-left: 22px;
 }
 
 .nav-links a {
   text-decoration: none;
   color: var(--text-muted);
-  font-size: 0.95rem;
+  font-size: 0.9rem;
   font-weight: 500;
   transition: all 0.3s ease;
 }
@@ -124,49 +124,48 @@ body {
 .nav-links .nav-btn {
   background: linear-gradient(135deg, #2563eb, var(--cyan-glow));
   color: #fff;
-  padding: 8px 20px;
+  padding: 8px 18px;
   border-radius: 20px;
   box-shadow: 0 0 12px rgba(37, 99, 235, 0.4);
 }
 
-/* --- Galaxy / Sea Banner --- */
+/* --- Real Cosmic Nebula Galaxy Banner --- */
 .hero-galaxy {
   position: relative;
-  height: 75vh;
+  height: 80vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
-  background: radial-gradient(circle at center, #0f172a 0%, #060913 100%);
+  background: linear-gradient(135deg, #090d16 0%, #0f172a 50%, #030712 100%);
   overflow: hidden;
   padding: 0 20px;
   border-bottom: 1px solid var(--border-glass);
 }
 
-.stars-overlay {
+/* Real Nebula Cosmic Effect Background */
+.nebula-overlay {
   position: absolute;
   top: 0; left: 0; right: 0; bottom: 0;
-  background-image: 
-    radial-gradient(2px 2px at 20px 30px, #ffffff, rgba(0,0,0,0)),
-    radial-gradient(2px 2px at 40px 70px, var(--cyan-glow), rgba(0,0,0,0)),
-    radial-gradient(1px 1px at 90px 40px, #ffffff, rgba(0,0,0,0)),
-    radial-gradient(2px 2px at 160px 120px, var(--cyan-glow), rgba(0,0,0,0));
-  background-repeat: repeat;
-  background-size: 200px 200px;
-  opacity: 0.4;
+  background: 
+    radial-gradient(circle at 20% 30%, rgba(37, 99, 235, 0.25) 0%, transparent 40%),
+    radial-gradient(circle at 80% 70%, rgba(56, 189, 248, 0.2) 0%, transparent 40%),
+    radial-gradient(circle at 50% 50%, rgba(147, 51, 234, 0.15) 0%, transparent 50%),
+    url('https://images.unsplash.com/photo-1506703719100-a0f3a48c0f86?q=80&w=1600&auto=format&fit=crop') center/cover no-repeat;
+  opacity: 0.45;
 }
 
 .hero-content {
   position: relative;
   z-index: 5;
-  max-width: 700px;
+  max-width: 750px;
 }
 
 .badge {
   display: inline-block;
   padding: 6px 16px;
-  background: rgba(56, 189, 248, 0.12);
+  background: rgba(56, 189, 248, 0.15);
   border: 1px solid var(--cyan-glow);
   border-radius: 20px;
   color: var(--cyan-glow);
@@ -175,7 +174,7 @@ body {
 }
 
 .hero-content h1 {
-  font-size: 3rem;
+  font-size: 3.2rem;
   margin-bottom: 10px;
 }
 
@@ -208,30 +207,36 @@ body {
   box-shadow: 0 0 25px rgba(56, 189, 248, 0.8);
 }
 
-/* --- Chibi Cat Animation (CSS Pure, No GIFs) --- */
-.walking-cat-track {
+/* --- 3-4 Chibi Walking Cats Animation --- */
+.walking-cats-container {
   position: absolute;
   bottom: 0;
   left: 0;
   width: 100%;
-  height: 50px;
+  height: 55px;
   pointer-events: none;
+  z-index: 10;
 }
 
-.css-chibi-cat {
+.chibi-cat {
   position: absolute;
   bottom: 5px;
-  font-size: 2.2rem;
-  color: var(--cyan-glow);
-  animation: walkAcross 16s linear infinite;
-  text-shadow: 0 0 10px var(--cyan-glow);
+  font-size: 1.8rem;
+  animation: walkAcross 18s linear infinite;
+  filter: drop-shadow(0 0 8px rgba(56, 189, 248, 0.6));
 }
 
+.cat-1 { animation-delay: 0s; }
+.cat-2 { animation-delay: 4.5s; }
+.cat-3 { animation-delay: 9s; }
+.cat-4 { animation-delay: 13.5s; }
+
 @keyframes walkAcross {
-  0% { left: -60px; transform: scaleX(1); }
-  50% { transform: scaleX(1) translateY(-8px); }
-  50.5% { transform: scaleX(1) translateY(0); }
-  100% { left: 102%; transform: scaleX(1); }
+  0% { left: -60px; transform: scaleX(1) translateY(0); }
+  25% { transform: scaleX(1) translateY(-4px); }
+  50% { transform: scaleX(1) translateY(0); }
+  75% { transform: scaleX(1) translateY(-4px); }
+  100% { left: 105%; transform: scaleX(1) translateY(0); }
 }
 
 /* --- 1. About Me --- */
@@ -265,7 +270,7 @@ body {
   box-shadow: 0 0 10px rgba(56, 189, 248, 0.3);
 }
 
-/* --- 2. Education Journey --- */
+/* --- 2. My Learning Journey --- */
 .timeline {
   max-width: 750px;
   margin: 0 auto;
@@ -312,7 +317,7 @@ body {
   margin: 6px 0 12px;
 }
 
-/* --- 3. Projects --- */
+/* --- 3. Projects & Activities --- */
 .projects-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
@@ -434,6 +439,7 @@ body {
   color: #fff;
   text-decoration: none;
   font-weight: 600;
+  word-break: break-all;
 }
 
 .info-item a:hover {
@@ -491,26 +497,28 @@ body {
   box-shadow: 0 0 20px rgba(56, 189, 248, 0.6);
 }
 
-/* --- Footer Chibi Walking Bar --- */
+/* --- Footer Chibi Walking Cats Bar --- */
 .footer-cat-bar {
   position: relative;
   height: 45px;
-  background: #020408;
+  background: #010204;
   overflow: hidden;
   border-top: 1px solid var(--border-glass);
 }
 
-.footer-cat {
+.footer-cats-track {
   position: absolute;
-  bottom: 8px;
-  font-size: 1.4rem;
-  animation: walkAcross 18s linear infinite;
+  bottom: 6px;
+  display: flex;
+  gap: 150px;
+  font-size: 1.3rem;
+  animation: walkAcross 20s linear infinite;
 }
 
 footer {
   text-align: center;
   padding: 20px;
-  background: #020408;
+  background: #010204;
   color: var(--text-muted);
   font-size: 0.85rem;
 }
@@ -523,7 +531,7 @@ footer {
   }
   
   .nav-links li {
-    margin: 0 8px;
+    margin: 0 6px;
   }
   
   .hero-content h1 {
