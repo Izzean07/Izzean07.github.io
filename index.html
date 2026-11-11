@@ -14,20 +14,20 @@
   <!-- Navigation Bar -->
   <nav class="navbar">
     <div class="logo">
-      <i class="fa-solid fa-cat"></i> Portfolio <span>.</span>
+      <i class="fa-solid fa-cat"></i> Izzean's Portfolio <span>.</span>
     </div>
     <ul class="nav-links">
       <li><a href="#about">About Me</a></li>
-      <li><a href="#education">Education Journey</a></li>
+      <li><a href="#learning">My Learning Journey</a></li>
       <li><a href="#projects">My Projects</a></li>
       <li><a href="#tools">Tools</a></li>
       <li><a href="#connect" class="nav-btn">Connect With Me</a></li>
     </ul>
   </nav>
 
-  <!-- Hero Section: Galaxy / Sea Deep Blue Banner -->
+  <!-- Hero Section: Real Nebula Galaxy Banner -->
   <header class="hero-galaxy">
-    <div class="stars-overlay"></div>
+    <div class="nebula-overlay"></div>
     
     <div class="hero-content">
       <div class="badge">✨ Welcome to my e-portfolio</div>
@@ -36,11 +36,12 @@
       <a href="#connect" class="btn-glow">Contact Me <i class="fa-solid fa-paper-plane"></i></a>
     </div>
 
-    <!-- Pure CSS / Icon Chibi Walking Cat 1 -->
-    <div class="walking-cat-track">
-      <div class="css-chibi-cat cat-running">
-        <i class="fa-solid fa-cat"></i>
-      </div>
+    <!-- 4 Chibi Walking Cats on Hero Banner -->
+    <div class="walking-cats-container">
+      <div class="chibi-cat cat-1">🐱🐾</div>
+      <div class="chibi-cat cat-2">🐈✨</div>
+      <div class="chibi-cat cat-3">🐾🐱</div>
+      <div class="chibi-cat cat-4">🐈‍⬛💖</div>
     </div>
   </header>
 
@@ -50,17 +51,17 @@
     <div class="glass-card about-container">
       <div class="cat-badge-corner"><i class="fa-solid fa-paw"></i></div>
       <p>
-        Welcome to my e-portfolio! I am an undergraduate student pursuing a Bachelor of Computer Science (Data Engineering), with a strong passion for data analysis, programming, and structured problem solving.
+        Welcome to my e-portfolio! I am an undergraduate student pursuing a Bachelor of Computer Science (Data Engineering) at Universiti Teknologi Malaysia, with a strong passion for data analysis, programming, and structured problem solving.
       </p>
       <p>
-        I am always eager to learn new technologies, build meaningful projects, and sharpen my technical skills in software engineering and database management.
+        I am always eager to learn new technologies, build meaningful software solutions, and continuously sharpen my technical capabilities in data management and development.
       </p>
     </div>
   </section>
 
-  <!-- 2. Section: My Education Journey -->
-  <section id="education" class="section bg-darker">
-    <h2 class="section-title">My Education Journey</h2>
+  <!-- 2. Section: My Learning Journey -->
+  <section id="learning" class="section bg-darker">
+    <h2 class="section-title">My Learning Journey</h2>
     <div class="timeline">
       
       <div class="timeline-item">
@@ -83,48 +84,61 @@
         </div>
       </div>
 
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="glass-card timeline-content">
+          <h3>Sijil Pelajaran Malaysia (SPM)</h3>
+          <span class="institution">SMK Bandar Seri Alam</span>
+          <span class="date"><i class="fa-regular fa-calendar"></i> 2020 - 2024</span>
+          <p>Achieved excellent results with <strong>8As and 1B</strong>. Served actively as the Treasurer (Bendahari) for the Library Prefects Board (Pengawas Perpustakaan).</p>
+        </div>
+      </div>
+
     </div>
   </section>
 
-  <!-- 3. Section: My Projects -->
+  <!-- 3. Section: My Projects (3 Special Sub-pages / Clickable Cards) -->
   <section id="projects" class="section">
-    <h2 class="section-title">My Projects</h2>
+    <h2 class="section-title">My Projects & Activities</h2>
     <div class="projects-grid">
       
+      <!-- Project 1: Industry Talk 1 -->
       <div class="glass-card project-card">
         <div class="project-info">
-          <h3>C++ System Application</h3>
-          <p>A console-based data management application built in C++ implementing custom data structures and file handling.</p>
+          <h3>Industry Talk 1</h3>
+          <p>An insightful session exploring modern data engineering trends, industry expectations, and enterprise software practices.</p>
           <div class="tags">
-            <span>C++</span>
-            <span>CLI</span>
+            <span>Seminar</span>
+            <span>Data Engineering</span>
           </div>
-          <a href="#" target="_blank" class="project-link">View on GitHub <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+          <!-- Clickable to dedicated view / modal / page anchor -->
+          <a href="project-talk1.html" class="project-link">View Details <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
         </div>
       </div>
 
+      <!-- Project 2: Industry Talk 2 -->
       <div class="glass-card project-card">
         <div class="project-info">
-          <h3>Database & SQL Design</h3>
-          <p>Relational database schema design (RDBMS) and custom SQL script writing for structured queries.</p>
+          <h3>Industry Talk 2</h3>
+          <p>Focused discussion on scalable cloud databases, career preparation, and real-world software architecture workflows.</p>
           <div class="tags">
-            <span>SQL</span>
-            <span>Database</span>
+            <span>Tech Talk</span>
+            <span>Architecture</span>
           </div>
-          <a href="#" target="_blank" class="project-link">View on GitHub <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+          <a href="project-talk2.html" class="project-link">View Details <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
         </div>
       </div>
 
+      <!-- Project 3: Industry Visit -->
       <div class="glass-card project-card">
         <div class="project-info">
-          <h3>GitHub E-Portfolio Website</h3>
-          <p>A personal responsive portfolio website built using HTML5 and CSS3 with a custom Galaxy theme layout.</p>
+          <h3>Industry Visit</h3>
+          <p>An immersive corporate visit to a premier technology company observing live data center operations and engineering teams.</p>
           <div class="tags">
-            <span>HTML5</span>
-            <span>CSS3</span>
-            <span>GitHub Pages</span>
+            <span>Field Trip</span>
+            <span>Tech Company</span>
           </div>
-          <a href="#" target="_blank" class="project-link">View on GitHub <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+          <a href="project-visit.html" class="project-link">View Details <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
         </div>
       </div>
 
@@ -159,7 +173,7 @@
           <i class="fa-solid fa-envelope"></i>
           <div>
             <h4>Email</h4>
-            <a href="mailto:zulaikha@example.com">zulaikha@example.com</a>
+            <a href="mailto:izzeanzulaikha@graduate.utm.my">izzeanzulaikha@graduate.utm.my</a>
           </div>
         </div>
 
@@ -167,7 +181,7 @@
           <i class="fa-solid fa-phone"></i>
           <div>
             <h4>Phone</h4>
-            <a href="tel:+60123456789">+60 12-345 6789</a>
+            <a href="tel:+60167039214">016-7039214</a>
           </div>
         </div>
 
@@ -175,7 +189,7 @@
           <i class="fa-brands fa-github"></i>
           <div>
             <h4>GitHub Profile</h4>
-            <a href="https://github.com" target="_blank">github.com/yourusername</a>
+            <a href="https://github.com/Izzean07" target="_blank">github.com/Izzean07</a>
           </div>
         </div>
       </div>
@@ -205,10 +219,13 @@
     </div>
   </section>
 
-  <!-- Walking Chibi Cat Footer Animation Bar -->
+  <!-- Walking Chibi Cats Footer Bar -->
   <div class="footer-cat-bar">
-    <div class="footer-cat">
-      🐱🐾
+    <div class="footer-cats-track">
+      <span>🐱🐾</span>
+      <span>🐈✨</span>
+      <span>🐾🐱</span>
+      <span>🐈‍⬛💖</span>
     </div>
   </div>
 
